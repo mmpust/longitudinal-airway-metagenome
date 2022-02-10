@@ -6,7 +6,7 @@ Marie-Madlen Pust<sup>1,2</sup>, Isa Rudolf<sup>1,2</sup>, Anna-Maria Dittrich<s
 <br><br>
 
 ### Background contamination
-
+![Alt text](https://github.com/mmpust/longitudinal-airway-metagenome/blob/main/negative_controls.jpeg?raw=true "Background contamination")
 
 ### R session
 ```
