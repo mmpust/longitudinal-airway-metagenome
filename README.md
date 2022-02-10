@@ -6,8 +6,7 @@ Marie-Madlen Pust<sup>1,2</sup>, Isa Rudolf<sup>1,2</sup>, Anna-Maria Dittrich<s
 <br><br>
 
 ### Background contamination
-
-### Reference database used for read alignment
+![Alt text](https://github.com/mmpust/longitudinal-airway-metagenome/blob/main/neg_controls.jpeg?raw=true "Background contamination")
 
 ### R session
 ```
