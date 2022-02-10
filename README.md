@@ -13,7 +13,7 @@ Marie-Madlen Pust<sup>1,2</sup>, Isa Rudolf<sup>1,2</sup>, Anna-Maria Dittrich<s
 ```
 2021_12_meta_fungi_human_masked [2]
 ```
-<br><br>
+<br>
 
 ### R session
 ```
