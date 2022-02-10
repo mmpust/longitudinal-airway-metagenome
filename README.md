@@ -56,3 +56,8 @@ modules imported as dependencies
 [1] IPython_7.31.0	jupyter_client_6.1.7	jupyter_core_4.6.3	notebook_6.1.4
 -----
 ```
+<br><br>
+### References
+[1] Pust, MM., Tümmler, B. Identification of core and rare species in metagenome samples based on shotgun metagenomic sequencing, Fourier transforms and spectral comparisons. ISME COMMUN. 1, 2 (2021). Available from https://www.nature.com/articles/s43705-021-00010-6#citeas <br>
+[2] Davenport, C. et al. Wochenende - A whole Genome/Metagenome Sequencing Alignment Pipeline (version). Available from https://github.com/MHH-RCUG/Wochenende <br>
+[3] McInnes, L., Healy, J., Melvillear, J. UMAP: Uniform Manifold Approximation and Projection for Dimension Reduction. Xiv:1802.03426 <br>
