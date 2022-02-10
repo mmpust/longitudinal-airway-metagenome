@@ -8,6 +8,13 @@ Marie-Madlen Pust<sup>1,2</sup>, Isa Rudolf<sup>1,2</sup>, Anna-Maria Dittrich<s
 ### Background contamination
 ![Alt text](https://github.com/mmpust/longitudinal-airway-metagenome/blob/main/negative_controls.jpeg?raw=true "Background contamination")
 
+<br><br>
+### Reference database 
+```
+2021_12_meta_fungi_human_masked [2]
+```
+<br><br>
+
 ### R session
 ```
 R version 4.1.2 (2021-11-01)
