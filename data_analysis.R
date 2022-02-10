@@ -15,7 +15,8 @@ ipak <- function(pkg){
 
 # store required Rpackages
 packages_r <- c('readr','vegan','ggplot2','scales','dplyr','ggpubr','rcompanion','ggdendro','pheatmap',
-                'factoextra','matrixStats','ggrepel','tidyr','plyr','purrr','stringr','RVAideMemoire', 'umap', 'usedist')
+                'factoextra','matrixStats','ggrepel','tidyr','plyr','purrr','stringr','RVAideMemoire', 
+                'umap', 'usedist')
 
 # load required R packages
 ipak(packages_r)
@@ -163,19 +164,24 @@ spearman.ci(merged_cf$clr_median, merged_cf$growth_rate_median, nrep = 1000, con
 
 # generate circular plot for growth rates
 new_dataset_5$Patient <- as.factor(as.character(new_dataset_5$Patient))
+
 empty_bar = 50
 to_add <- data.frame(matrix(NA, empty_bar*nlevels(new_dataset_5$Patient), ncol(new_dataset_5)))
 colnames(to_add) <- colnames(new_dataset_5)
 to_add$Name <- rep(levels(new_dataset_5$Patient), each=empty_bar)
+
 new_dataset_5_2 <- rbind(new_dataset_5, to_add)
 label_data_growth <- select(new_dataset_5_2, c(Name, growth_rate_median))
 label_data_growth_2 <- ddply(label_data_growth, "Name", numcolwise(sum))
 label_data_growth_2$row_num <- rownames(label_data_growth_2)
 label_data_growth_2$row_num <- as.numeric(as.character(label_data_growth_2$row_num))
 label_data_growth_2$angle <- with(label_data_growth_2, ifelse(row_num < nrow(label_data_growth_2), 90, 180))
+
 number_of_bar <- nrow(label_data_growth_2)
+
 label_data_growth_2$angle <- 90 - 360 * (label_data_growth_2$row_num-0.5) / number_of_bar
-label_data_growth_2$angle_2 <- ifelse(label_data_growth_2$angle <  -110, label_data_growth_2$angle+180, label_data_growth_2$angle)
+label_data_growth_2$angle_2 <- ifelse(label_data_growth_2$angle <  -110, label_data_growth_2$angle+180, 
+                                      label_data_growth_2$angle)
 label_data_growth_2$hjust <- ifelse(label_data_growth_2$angle < -120, 0.8, 0.5)
 label_data_growth_2$Identifier_2 <- as.character(as.factor(label_data_growth_2$Name))
 label_data_growth_2$label_colour <- ifelse(grepl("X",label_data_growth_2$Identifier_2), 'Healthy', 'CF')
@@ -205,7 +211,8 @@ plot_growth <-
 
 # generate circular plot for phylum abundance
 count_df_phylum_clr_00_t_long$patient <- as.factor(as.character(count_df_phylum_clr_00_t_long$patient))
-to_add_phylum <- data.frame(matrix(NA, empty_bar*nlevels(count_df_phylum_clr_00_t_long$patient), ncol(count_df_phylum_clr_00_t_long)))
+to_add_phylum <- data.frame(matrix(NA, empty_bar*nlevels(count_df_phylum_clr_00_t_long$patient), 
+                                   ncol(count_df_phylum_clr_00_t_long)))
 colnames(to_add_phylum) <- colnames(count_df_phylum_clr_00_t_long)
 to_add_phylum$Identifier <- rep(levels(count_df_phylum_clr_00_t_long$patient), each=empty_bar)
 count_df_phylum_clr_00_t_long_2 <- rbind(count_df_phylum_clr_00_t_long, to_add_phylum)
@@ -220,11 +227,16 @@ label_data_2$angle_2 <- ifelse(label_data_2$angle <  -110, label_data_2$angle+18
 label_data_2$hjust <- ifelse(label_data_2$angle < -120, 0.8, 0.5)
 label_data_2$Identifier_2 <- as.character(as.factor(label_data_2$Identifier))
 label_data_2$label_colour <- ifelse(grepl("X",label_data_2$Identifier_2), 'Healthy', 'CF')
-count_df_phylum_clr_00_t_long_2$CLR_2 <- ifelse(count_df_phylum_clr_00_t_long_2$CLR >= 0, count_df_phylum_clr_00_t_long_2$CLR, 0)
-count_df_phylum_clr_00_t_long_2$Phylum <- str_replace_all(count_df_phylum_clr_00_t_long_2$Phylum, "Actinobacteria", "Actinomycetota")
-count_df_phylum_clr_00_t_long_2$Phylum <- str_replace_all(count_df_phylum_clr_00_t_long_2$Phylum, "Firmicutes", "Bacillota")
-count_df_phylum_clr_00_t_long_2$Phylum <- str_replace_all(count_df_phylum_clr_00_t_long_2$Phylum, "Proteobacteria", "Pseudomonadota")
-count_df_phylum_clr_00_t_long_2$Phylum <- str_replace_all(count_df_phylum_clr_00_t_long_2$Phylum, "Bacteroidetes", "Bacteroidota")
+count_df_phylum_clr_00_t_long_2$CLR_2 <- ifelse(count_df_phylum_clr_00_t_long_2$CLR >= 0, 
+                                                count_df_phylum_clr_00_t_long_2$CLR, 0)
+count_df_phylum_clr_00_t_long_2$Phylum <- str_replace_all(count_df_phylum_clr_00_t_long_2$Phylum, 
+                                                          "Actinobacteria", "Actinomycetota")
+count_df_phylum_clr_00_t_long_2$Phylum <- str_replace_all(count_df_phylum_clr_00_t_long_2$Phylum, 
+                                                          "Firmicutes", "Bacillota")
+count_df_phylum_clr_00_t_long_2$Phylum <- str_replace_all(count_df_phylum_clr_00_t_long_2$Phylum, 
+                                                          "Proteobacteria", "Pseudomonadota")
+count_df_phylum_clr_00_t_long_2$Phylum <- str_replace_all(count_df_phylum_clr_00_t_long_2$Phylum, 
+                                                          "Bacteroidetes", "Bacteroidota")
 
 phylum_plot <- ggplot(count_df_phylum_clr_00_t_long_2) +
   geom_col(aes(x=Identifier, 
@@ -326,14 +338,16 @@ pca_H_df$Age_in_weeks <- H_metadata$Age_in_weeks
 
 # PCA CF plot
 cf_plot <- ggplot(pca_df) +
-  geom_point(aes(x=PC1, y=PC2, colour=Age_in_weeks, size=Age_in_weeks), shape=16) + ylim(-0.35,0.3) + xlim(0,0.21) + 
+  geom_point(aes(x=PC1, y=PC2, colour=Age_in_weeks, size=Age_in_weeks), shape=16) + 
+ylim(-0.35,0.3) + xlim(0,0.21) + 
   scale_colour_gradient2(name="Age (in weeks)", 
                          low=muted("red"), 
                          mid= "khaki", 
                          high=muted("blue"), 
                          midpoint=100,
                          guide = guide_legend(title.position = "top", ncol = 1)) +
-  scale_size(name="Age (in weeks)", range = c(1,5)) + theme_bw() + xlab(paste("PC1 ","(",dim1_CF, "%)")) + ylab(paste("PC2 ","(",dim2_CF, "%)")) +
+  scale_size(name="Age (in weeks)", range = c(1,5)) + theme_bw() + 
+xlab(paste("PC1 ","(",dim1_CF, "%)")) + ylab(paste("PC2 ","(",dim2_CF, "%)")) +
   
   theme(panel.grid = element_blank(), legend.position = "bottom", legend.direction = "vertical") +
   guides(colour=guide_legend(nrow=1,byrow=TRUE, title.hjust = 0.5))
@@ -341,14 +355,16 @@ cf_plot <- ggplot(pca_df) +
 # PCA healthy plot
 healthy_plot <-
   ggplot(pca_H_df) +
-  geom_point(aes(x=PC1*-1, y=PC2*1, colour=Age_in_weeks, size=Age_in_weeks), shape=17) + ylim(-0.35,0.3) + xlim(0,0.21) + 
+  geom_point(aes(x=PC1*-1, y=PC2*1, colour=Age_in_weeks, size=Age_in_weeks), shape=17) + 
+ylim(-0.35,0.3) + xlim(0,0.21) + 
   scale_colour_gradient2(name="Age (in weeks)", 
                          low=muted("red"), 
                          mid= "khaki", 
                          high=muted("blue"), 
                          midpoint=100,
                          guide = guide_legend(title.position = "top", ncol = 1)) +
-  scale_size(name="Age (in weeks)", range = c(1,5)) + theme_bw() + xlab(paste("PC1 ","(",dim1_H, "%)")) + ylab(paste("PC2 ","(",dim2_H, "%)")) +
+  scale_size(name="Age (in weeks)", range = c(1,5)) + theme_bw() + xlab(paste("PC1 ","(",dim1_H, "%)")) + 
+ylab(paste("PC2 ","(",dim2_H, "%)")) +
   theme(panel.grid = element_blank(), legend.position = "bottom", legend.direction = "vertical") +
   guides(colour=guide_legend(nrow=1,byrow=TRUE, title.hjust = 0.5))
 
@@ -357,7 +373,8 @@ healthy_plot <-
 remove_zero = 0.0000000
 colnames(growth_file_quant_s_1_t_CF) <- str_replace_all(colnames(growth_file_quant_s_1_t_CF), "\\.","-")
 
-list_last_samples <- c("CF-A-09", "CF-B-04", "CF-C-03", "CF-D-02", "CF-E-06", "CF-F-04", "CF-G-06", "CF-H-06", "CF-I-04", "CF-J-04", "CF-K-05", "CF-L-04", "CF-M-02")
+list_last_samples <- c("CF-A-09", "CF-B-04", "CF-C-03", "CF-D-02", "CF-E-06", "CF-F-04", "CF-G-06",
+                       "CF-H-06", "CF-I-04", "CF-J-04", "CF-K-05", "CF-L-04", "CF-M-02")
 growth_diversity_t_last <- select(growth_file_quant_s_1_t_CF, all_of(list_last_samples))
 braycurtis_last_CF = vegdist(t(growth_diversity_t_last), "bray")
 braycurtis_df_last <- as.data.frame(as.matrix(braycurtis_last_CF))
@@ -484,7 +501,8 @@ colnames(braycurtis_df_h_last_list) <- c("Distance", "Type")
 braycurtis_df_h_last_list$State <- "Healthy"
 
 # merge CF and healthy distance plot
-bothit <- data.frame(rbind(braycurtis_df_first_list, braycurtis_df_last_list, braycurtis_df_h_first_list, braycurtis_df_h_last_list))
+bothit <- data.frame(rbind(braycurtis_df_first_list, braycurtis_df_last_list, 
+                           braycurtis_df_h_first_list, braycurtis_df_h_last_list))
 
 # obtain statistics
 df_p_val <- bothit %>% 
@@ -519,9 +537,12 @@ rcompanion::wilcoxonR(bothit_cf$Distance, g=bothit_cf$Type, ci=TRUE) # R: 0.24, 
 wilcox.test(bothit_cf$Distance, g=bothit_cf$Type) # V = 48828, p-value < 2.2e-16
 
 # merge and generate Figure 1
-first_plot <- ggarrange(cf_plot, healthy_plot, nrow=1, common.legend = TRUE, legend="bottom", labels = c("C", "D"))
-second_plot <- ggarrange(first_plot, my_boxplot, nrow=1, labels = c("C", "E"), widths = c(1,0.5))
-phylum_plot_merged <- ggarrange(phylum_plot, plot_growth, leg_ggplot, nrow=1, widths = c(1,1.1,0.4), labels=c("A", "B"))
+first_plot <- ggarrange(cf_plot, healthy_plot, nrow=1, common.legend = TRUE, 
+                        legend="bottom", labels = c("C", "D"))
+second_plot <- ggarrange(first_plot, my_boxplot, nrow=1, labels = c("C", "E"), 
+                         widths = c(1,0.5))
+phylum_plot_merged <- ggarrange(phylum_plot, plot_growth, leg_ggplot, nrow=1, 
+                                widths = c(1,1.1,0.4), labels=c("A", "B"))
 final_plot_figure1 <- ggarrange(phylum_plot_merged, second_plot, nrow=2, heights = c(1,0.7))
 
 
@@ -566,7 +587,8 @@ part1 <-
   geom_label(aes(x=-12,y=-12), label="Cluster 2", size=4) +
   geom_label(aes(x=20,y=-13), label="Cluster 3", size=4) +  theme_bw() +
   
-  scale_size("Age [in weeks]", range=c(1,8), breaks = c(50,100,150,200), guide = guide_legend(title.position = "top", nrow = 2)) +
+  scale_size("Age [in weeks]", range=c(1,8), breaks = c(50,100,150,200), 
+             guide = guide_legend(title.position = "top", nrow = 2)) +
   
   scale_fill_manual("Patient", values=c("X"="grey80", 
                                         "CF-A"="firebrick1", 
@@ -695,4 +717,3 @@ dev.off()
 pdf("Figure_3.pdf", width = 4, height=5)
 sq_distance_plot
 dev.off()
-
