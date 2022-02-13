@@ -7,7 +7,7 @@ Marie-Madlen Pust<sup>1,2</sup>, Isa Rudolf<sup>1,2</sup>, Anna-Maria Dittrich<s
 
 ### Background contamination
 ![Alt text](https://github.com/mmpust/longitudinal-airway-metagenome/blob/main/negative_controls.jpeg?raw=true "Background contamination")
-
+<br><br>
 ### Supplementary figure
 ![Alt text](https://github.com/mmpust/longitudinal-airway-metagenome/blob/main/Figure_S1.jpeg?raw=true "Figure S1")
 
@@ -15,7 +15,7 @@ Marie-Madlen Pust<sup>1,2</sup>, Isa Rudolf<sup>1,2</sup>, Anna-Maria Dittrich<s
 <br><br>
 ### Reference database 
 ```
-2021_12_meta_fungi_human_masked [2]
+2021_12_meta_fungi_human_masked [3]
 ```
 <br>
 
@@ -69,6 +69,6 @@ modules imported as dependencies
 ```
 <br><br>
 ### References
-[1] Pust, MM., Tümmler, B. Identification of core and rare species in metagenome samples based on shotgun metagenomic sequencing, Fourier transforms and spectral comparisons. ISME COMMUN. 1, 2 (2021). Available from https://www.nature.com/articles/s43705-021-00010-6#citeas <br>
-[2] Davenport, C. et al. Wochenende - A whole Genome/Metagenome Sequencing Alignment Pipeline (version 1.5.4). Available from https://github.com/MHH-RCUG/Wochenende <br>
-[3] McInnes, L., Healy, J., Melvillear, J. UMAP: Uniform Manifold Approximation and Projection for Dimension Reduction. Xiv:1802.03426 <br>
+[1] Pust, MM., Tümmler, B. Identification of core and rare species in metagenome samples based on shotgun metagenomic sequencing, Fourier transforms and spectral comparisons. ISME COMMUN. 1, 2 (2021) <br>
+[2] Apostol, T.M. and Mnatsakanian, M.A. Sums of squares of distances in m-space. Math. Assoc. Am. Monthly 110, 516 (2003). <br>
+[3] Davenport, C. et al. Wochenende - A whole Genome/Metagenome Sequencing Alignment Pipeline (version 1.5.4). Available from https://github.com/MHH-RCUG/Wochenende <br>
