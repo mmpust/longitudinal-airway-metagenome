@@ -6,7 +6,7 @@ Marie-Madlen Pust<sup>1,2</sup>, Isa Rudolf<sup>1,2</sup>, Anna-Maria Dittrich<s
 
 ### Additional information
 ![Alt text](https://github.com/mmpust/longitudinal-airway-metagenome/blob/main/Figure_S1_2022_02_14.jpeg?raw=true "Background contamination")
-**Figure S1. Overview of the background contamination of the clinical study.** Blank swabs (BlankSwab_A - BlankSwab_I) and empty water controls (Water_A - Water_M) were collected, processed and sequenced with patient samples. After raspir filtering [1],  *Cutibacterium acnes*  was found in seven negative controls. The circular bar-plot shows raw count data with a maximum of 612 DNA reads aligning to  *C. acnes* in BlankSwab_C. No airway-associated microbes were recovered from our negative controls. Note: Control samples were labeled independently from patient samples, so there are no paired associations.
+**Figure S1. Overview of the background contamination of the overall workflow.** Blank swabs (BlankSwab_A - BlankSwab_I) and empty water controls (Water_A - Water_M) were collected, processed and sequenced with patient samples. After raspir filtering [1],  *Cutibacterium acnes*  was found in seven negative controls. The circular bar-plot shows raw count data with a maximum of 612 DNA reads aligning to  *C. acnes* in BlankSwab_C. No airway-associated microbes were recovered from our negative controls. Note: Control samples were labeled independently from patient samples, so there are no paired associations.
 
 <br><br>
 ![Alt text](https://github.com/mmpust/longitudinal-airway-metagenome/blob/main/Figure_S2_2022_02_14.jpeg?raw=true "Figure S1")
