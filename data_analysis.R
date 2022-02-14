@@ -702,10 +702,11 @@ relAbundance_healthy <-
                           panel.border = element_rect(colour="black", fill=NA)) 
 
 # merge figures
-first_plot <- ggarrange(rothia_cf, relAbundance_healthy, nrow=2, ncol=1, common.legend=FALSE, heights = c(1, 0.3), widths = c(1,0.5))
-final_plot <- ggarrange(part1, first_plot, nrow=1, labels = c("A", "B"), widths = c(1,0.7))
+first_plot <- ggarrange(rothia_cf, relAbundance_healthy, nrow=2, ncol=1, common.legend=FALSE, heights = c(1, 0.3), widths = c(1,0.5),
+                        labels=c("B-CF", "B-Healthy"), label.x = -0.1, label.y = c(1,1.15))
 
-# export figures
+final_plot <- ggarrange(part1, first_plot, nrow=1, labels = c("A", "B-CF"), widths = c(1,0.7), label.x = c(0,-0.1), label.y = c(1,1))
+
 pdf("Figure_1.pdf", width = 14, height = 9.5)
 final_plot_figure1
 dev.off()
