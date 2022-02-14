@@ -77,6 +77,6 @@ modules imported as dependencies
 ### References
 [1] Pust, MM., Tümmler, B. Identification of core and rare species in metagenome samples based on shotgun metagenomic sequencing, Fourier transforms and spectral comparisons. 
     ISME COMMUN. 1, 2 (2021). <br>
-[2] McInnes, L., Healy, J., Melville, J. UMAP: Uniform Manifold Approximation and Projection for Dimension Reduction. arXiv:1802.03426v3 (2020). <br>
+[2] McInnes, L., Healy, J., Melville, J. UMAP: Uniform Manifold Approximation and Projection for dimension reduction. arXiv:1802.03426v3 (2020). <br>
 [3] Apostol, T.M., Mnatsakanian, M.A. Sums of squares of distances in m-space. Math. Assoc. Am. Monthly 110, 516 (2003). <br>
 [4] Davenport, C. et al. Wochenende - A whole Genome/Metagenome Sequencing Alignment Pipeline (version 1.5.4). Available from https://github.com/MHH-RCUG/Wochenende <br>
