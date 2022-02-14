@@ -5,11 +5,11 @@ Marie-Madlen Pust<sup>1,2</sup>, Isa Rudolf<sup>1,2</sup>, Anna-Maria Dittrich<s
 <br><br>
 
 ### Additional information
-![Alt text](https://github.com/mmpust/longitudinal-airway-metagenome/blob/main/Figure_S1.jpeg?raw=true "Background contamination")
+![Alt text](https://github.com/mmpust/longitudinal-airway-metagenome/blob/main/Figure_S1_2022_02_14.jpeg?raw=true "Background contamination")
 **Figure S1. Overview of the background contamination of the clinical study.** Blank swabs (BlankSwab_A - BlankSwab_I) and empty water controls (Water_A - Water_M) were collected, processed and sequenced with patient samples. After raspir filtering [1],  *Cutibacterium acnes*  was found in seven negative controls. The circular bar-plot shows raw count data with a maximum of 612 DNA reads aligning to  *C. acnes* in BlankSwab_C. No airway-associated microbes were recovered from our negative controls. Note: Control samples were labeled independently from patient samples, so there are no paired associations.
 
 <br><br>
-![Alt text](https://github.com/mmpust/longitudinal-airway-metagenome/blob/main/Figure_S2.jpeg?raw=true "Figure S1")
+![Alt text](https://github.com/mmpust/longitudinal-airway-metagenome/blob/main/Figure_S2_2022_02_14.jpeg?raw=true "Figure S1")
 **Figure S2. Comparison of the variation of *Rothia mucilaginosa* clonal signatures among healthy (yellow) and CF (blue) infants per Uniform Manifold Approximation and Projection (UMAP) cluster.** UMAP clustering [2] was performed with random_state = 111, n_neighbors = 9, n_components = 2, spread = 8, metric="Euclidean" (data_analysis.R contains the complete code structure). As visualised in Figure 2A of the manuscript, the CF and healthy subjects were partitioned into three distinct groups (three UMAP clusters). The squared distance of each point to its group centroid was calculated [3]. UMAP cluster 3 contained *R. mucilaginosa* airway isoaltes from healthy children of low toddler age. Only a single CF sample was assigned to cluster 3. Consequently, there was no difference in the distance of *R. mucilaginosa* clonal signatures from the group centroid between healthy and CF carriers. Cluster 2 contained the *R. mucilaginosa* airway isoaltes from healthy and CF children but CF and healthy carriers showed comparable variations in clonal signatures. In cluster 1 however, a significantly higher sequence variation was apparent among the strains from CF donors suggesting the emergence of individual clonal signatures of *R. mucilaginosa* in CF hosts from early on.
 
 <br><br>
