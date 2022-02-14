@@ -10,13 +10,16 @@ Marie-Madlen Pust<sup>1,2</sup>, Isa Rudolf<sup>1,2</sup>, Anna-Maria Dittrich<s
 
 <br><br>
 ![Alt text](https://github.com/mmpust/longitudinal-airway-metagenome/blob/main/Figure_S2_2022_02_14.jpeg?raw=true "Figure S1")
-**Figure S2. Comparison of the variation of *Rothia mucilaginosa* clonal signatures among healthy (yellow) and CF (blue) infants per Uniform Manifold Approximation and Projection (UMAP) cluster.** UMAP clustering [2] was performed with random_state = 111, n_neighbors = 9, n_components = 2, spread = 8, metric="Euclidean" (data_analysis.R contains the complete code structure). As visualised in Figure 2A of the manuscript, the CF and healthy subjects were partitioned into three distinct groups (three UMAP clusters). The squared distance of each point to its group centroid was calculated [3]. UMAP cluster 3 contained *R. mucilaginosa* airway isoaltes from healthy children of low toddler age. Only a single CF sample was assigned to cluster 3. Consequently, there was no difference in the distance of *R. mucilaginosa* clonal signatures from the group centroid between healthy and CF carriers. Cluster 2 contained the *R. mucilaginosa* airway isoaltes from healthy and CF children but CF and healthy carriers showed comparable variations in clonal signatures. In cluster 1 however, a significantly higher sequence variation was apparent among the strains from CF donors suggesting the emergence of individual clonal signatures of *R. mucilaginosa* in CF hosts from early on.
+**Figure S2. Comparison of the variation of *Rothia mucilaginosa* clonal signatures among healthy (yellow) and CF (blue) infants per Uniform Manifold Approximation and Projection (UMAP) [2] cluster.** UMAP clustering was performed with random_state = 111, n_neighbors = 9, n_components = 2, spread = 8, metric="Euclidean" (data_analysis.R contains the complete code structure). As visualised in Figure 2A of the manuscript, the CF and healthy subjects were partitioned into three distinct groups (three UMAP clusters). The squared distance of each point to its group centroid was calculated [3]. UMAP cluster 3 contained *R. mucilaginosa* airway isoaltes from healthy children of low toddler age. Only a single CF sample was assigned to cluster 3. Consequently, there was no difference in the distance of *R. mucilaginosa* clonal signatures from the group centroid between healthy and CF carriers. Cluster 2 contained the *R. mucilaginosa* airway isoaltes from healthy and CF children but CF and healthy carriers showed comparable variations in clonal signatures. In cluster 1 however, a significantly higher sequence variation was apparent among the strains from CF donors suggesting the emergence of individual clonal signatures of *R. mucilaginosa* in CF hosts from early on.
 
-<br><br>
+<br>
+
 ### Reference database 
+
 ```
 2021_12_meta_fungi_human_masked [4]
 ```
+
 <br>
 
 ### R session
@@ -67,8 +70,11 @@ modules imported as dependencies
 [1] IPython_7.31.0	jupyter_client_6.1.7	jupyter_core_4.6.3	notebook_6.1.4
 -----
 ```
+
 <br><br>
 ### References
-[1] Pust, MM., Tümmler, B. Identification of core and rare species in metagenome samples based on shotgun metagenomic sequencing, Fourier transforms and spectral comparisons. ISME COMMUN. 1, 2 (2021) <br>
-[2] Apostol, T.M. and Mnatsakanian, M.A. Sums of squares of distances in m-space. Math. Assoc. Am. Monthly 110, 516 (2003). <br>
-[3] Davenport, C. et al. Wochenende - A whole Genome/Metagenome Sequencing Alignment Pipeline (version 1.5.4). Available from https://github.com/MHH-RCUG/Wochenende <br>
+[1] Pust, MM., Tümmler, B. Identification of core and rare species in metagenome samples based on shotgun metagenomic sequencing, Fourier transforms and spectral comparisons. 
+    ISME COMMUN. 1, 2 (2021). <br>
+[2] McInnes, L., Healy, J., Melville, J. UMAP: Uniform Manifold Approximation and Projection for Dimension Reduction. arXiv:1802.03426v3 (2020). <br>
+[3] Apostol, T.M., Mnatsakanian, M.A. Sums of squares of distances in m-space. Math. Assoc. Am. Monthly 110, 516 (2003). <br>
+[4] Davenport, C. et al. Wochenende - A whole Genome/Metagenome Sequencing Alignment Pipeline (version 1.5.4). Available from https://github.com/MHH-RCUG/Wochenende <br>
